@@ -53,7 +53,7 @@
     <UnityVersion>2020.3.7f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\LoadableActions\CustomizeAction.cs" />
+    <Compile Include="Assets\Scripts\LoadableActions\ListAction.cs" />
     <Compile Include="Assets\Scripts\LoadableActions\LoadAction.cs" />
     <Compile Include="Assets\Scripts\ILoadable.cs" />
     <Compile Include="Assets\Scripts\LoadableLoader.cs" />

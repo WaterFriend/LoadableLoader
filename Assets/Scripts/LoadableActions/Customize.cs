@@ -5,7 +5,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using Object = UnityEngine.Object;
 
-public abstract class Customize
+public class Customize
 {
     //public override void Load(Action callback = null)
     //{
