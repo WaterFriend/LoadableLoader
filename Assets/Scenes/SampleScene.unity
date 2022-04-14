@@ -172,18 +172,6 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: ListAction, ns: , asm: Assembly-CSharp}
-      data:
-        loadMode: 0
-        loadableActionList:
-        - id: 1
-        - id: 2
-    00000001:
-      type: {class: InstantiateAction, ns: , asm: Assembly-CSharp}
-      data:
-        parent: {fileID: 0}
-        assetSet: {fileID: 0}
-    00000002:
       type: {class: LoadAction, ns: , asm: Assembly-CSharp}
       data:
         assetSet: {fileID: 0}

@@ -57,9 +57,10 @@
     <Compile Include="Assets\Scripts\LoadableActions\LoadAction.cs" />
     <Compile Include="Assets\Scripts\ILoadable.cs" />
     <Compile Include="Assets\Scripts\LoadableLoader.cs" />
-    <Compile Include="Assets\Scripts\LoadableActions\Customize.cs" />
+    <Compile Include="Assets\Scripts\LoadableActions\CustomizeAction.cs" />
     <Compile Include="Assets\Scripts\LoadableAssetSet.cs" />
     <Compile Include="Assets\Scripts\LoadableActions\InstantiateAction.cs" />
+    <Compile Include="Assets\Scripts\DontDestroySingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
