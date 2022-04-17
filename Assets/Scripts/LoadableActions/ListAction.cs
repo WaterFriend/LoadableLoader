@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public class ListAction : ILoadableAction
 {
-    public enum LoadMode { Parallel, Sequencial }
+    public enum LoadMode { Parallel, Sequential }
     public LoadMode loadMode = LoadMode.Parallel;
     [SerializeReference]
     public List<ILoadableAction> loadableActionList  = new List<ILoadableAction>();
@@ -31,7 +31,7 @@ public class ListAction : ILoadableAction
                     case LoadMode.Parallel:
                         LoadParallel();
                         break;
-                    case LoadMode.Sequencial:
+                    case LoadMode.Sequential:
                         LoadSequencial(0);
                         break;
                 }

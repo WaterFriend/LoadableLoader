@@ -1,18 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LoadableLoader : MonoBehaviour, ILoadable
 {
     [SerializeReference]
     public ILoadable loadable;
     public bool loadOnStart = true;
+    public UnityEvent loadedEvent;
 
     private bool isLoadInvoked = false;
+    private Action loadedCallback;
 
     private void Start()
     {
         if (loadOnStart)
-            Load();
+            Load(null);
     }
 
     private void OnDestroy()
@@ -29,7 +32,10 @@ public class LoadableLoader : MonoBehaviour, ILoadable
             if (!isLoadInvoked)
             {
                 isLoadInvoked = true;
-                loadable.Load(callback);
+                if (callback != null)
+                    loadedCallback += callback;
+
+                loadable.Load(loadedCallback);
             }
         }
     }
@@ -48,5 +54,12 @@ public class LoadableLoader : MonoBehaviour, ILoadable
     public float GetLoadProgress()
     {
         return loadable.GetLoadProgress();
+    }
+
+    public void LoadCallBack()
+    {
+        loadedEvent?.Invoke();
+        loadedCallback?.Invoke();
+        loadedCallback = null; 
     }
 }
